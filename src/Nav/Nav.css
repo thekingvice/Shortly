@@ -1,0 +1,50 @@
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  margin: 0 5%;
+}
+
+.Nav__left-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Nav__link {
+  color: var(--grey);
+  text-decoration: none;
+}
+
+.Nav__link:hover {
+  color: var(--black);
+}
+
+.Nav__right-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Nav__login {
+  color: var(--grey);
+  cursor: pointer;
+}
+
+.Nav__sign-up {
+  color: var(--white);
+  background: var(--tiffany);
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.Nav__sign-up:hover {
+  opacity: 50%;
+}
+
+.Nav__sign-up:active {
+  opacity: 50%;
+}
