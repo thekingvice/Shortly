@@ -1,14 +1,18 @@
 import "./App.css";
 import Nav from "./Nav/Nav";
 import Landing from "./Landing/Landing";
-import Shortener from "./Shortener/Shortener";
+import Stats from "./Stats/Stats";
+import GetStarted from "./GetStarted/GetStarted";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
     <div className="App">
       <Nav></Nav>
       <Landing></Landing>
-      <Shortener></Shortener>
+      <Stats></Stats>
+      <GetStarted></GetStarted>
+      <Footer></Footer>
     </div>
   );
 }

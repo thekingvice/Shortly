@@ -4,10 +4,12 @@
   --grey: #929199;
   --black: black;
   --tiffany: #29d1d1;
-  --bright_tiffany: #47ffff;
+  --bright-tiffany: #47ffff;
   --white: white;
   --dark-blue: #34313c;
   --dark-purple: #3a3053;
+  --light-grey: #f0f1f6;
+  --deep-purple: #232027;
 }
 
 *,
@@ -40,81 +42,4 @@ svg,
 video {
   display: block;
   max-width: 100%;
-}
-
-.Shortener {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 5%;
-  gap: 1rem;
-}
-
-.Shortener__input-area {
-  background: url(/bg-shorten-desktop.svg);
-  background-color: var(--dark-purple);
-  color: var(--dark-blue);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 2rem 1rem;
-  border-radius: 0.5rem;
-}
-
-.Shortener__input {
-  background-color: var(--white);
-  width: 90%;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-}
-
-.Shortener__input:focus {
-  border: none;
-}
-
-.Shortener__submit {
-  color: var(--white);
-  background: var(--tiffany);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  white-space: nowrap;
-}
-
-.Shortener__submit:hover {
-  background: var(--bright_tiffany);
-}
-
-.Shortener__output {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-
-.Shortener__output-original {
-  display: flex;
-  align-items: center;
-}
-
-.Shortener__output-right {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.Shortener__output-short {
-  color: var(--tiffany);
-}
-
-.Shortener__copy-button {
-  background: var(--tiffany);
-  color: var(--white);
-  padding: 0.25rem 1rem;
-  border-radius: 0.5rem;
-}
-
-.Shortener__copy-button:hover {
-  opacity: 50%;
 }

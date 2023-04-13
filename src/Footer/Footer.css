@@ -1,0 +1,51 @@
+.Footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 5rem 5%;
+  background: var(--deep-purple);
+  gap: 2rem;
+}
+
+.Footer__logo {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(37deg) brightness(103%)
+    contrast(101%);
+}
+
+.Footer__column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.Footer__link {
+  color: var(--grey);
+  text-decoration: none;
+}
+
+.Footer__link:hover {
+  color: var(--tiffany);
+}
+
+.Footer__heading {
+  color: var(--white);
+  padding: 0 0 1rem 0;
+}
+
+.Footer__social-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.Footer__social-link {
+  height: fit-content;
+  color: transparent;
+}
+
+.Footer__social-icon {
+  height: fit-content;
+}
+
+.Footer__social-icon:hover {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(59%) saturate(7463%)
+    hue-rotate(120deg) brightness(89%) contrast(81%);
+}

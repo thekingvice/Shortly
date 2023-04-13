@@ -4,9 +4,6 @@
   margin: 5rem 5%;
 }
 
-.Landing__ {
-}
-
 .Landing__left {
   display: flex;
   flex-direction: column;
@@ -46,6 +43,4 @@
 }
 
 .Landing__hero {
-  position: relative;
-  left: 5rem;
 }
