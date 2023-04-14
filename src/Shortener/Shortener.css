@@ -32,6 +32,7 @@
 .Shortener__input:focus {
   border: none;
   outline: none;
+  /* border: 2px solid var(--faded-red); */
 }
 
 /* 2px solid var(--faded-red) */
@@ -93,8 +94,9 @@
 }
 
 @media (max-width: 855px) {
-  .Shortener__input-area {
+  .Shortener__input-wrapper {
     flex-direction: column;
+    gap: 1.5rem;
   }
 
   .Shortener__output {
@@ -109,5 +111,10 @@
 
   .Shortener__copy-button {
     width: 100%;
+  }
+
+  .test {
+    top: 4.75rem;
+    left: 2.25rem;
   }
 }

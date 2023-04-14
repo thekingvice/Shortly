@@ -10,48 +10,52 @@ export default function Shortener() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setOriginalUrl(url);
-    fetch(`https://api.shrtco.de/v2/shorten?url=${url}`)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.ok) {
-          setShortUrl(data.result.short_link);
-        } else {
-          console.log(data.error_code);
-        }
-      })
-      .catch((error) => console.log(error));
+
+    if (url.includes(".") && url.length >= 3) {
+      setErrorText("none");
+      setErrorBorder("none");
+      setOriginalUrl(url);
+      fetch(`https://api.shrtco.de/v2/shorten?url=${url}`)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.ok) {
+            setShortUrl(data.result.short_link);
+          } else {
+            console.log(data.error_code);
+          }
+        })
+        .catch((error) => console.log(error));
+      setUrl("");
+    } else {
+      setErrorText("block");
+      setErrorBorder("2px solid var(--faded-red)");
+    }
   };
 
   const handleCopy = () => {
     navigator.clipboard.writeText(shortUrl);
   };
 
-  const [error, setError] = useState("none");
+  const [errorBorder, setErrorBorder] = useState("none");
   const [errorText, setErrorText] = useState("none");
 
-  // useEffect(() => {
-  //   if (url.includes(".")  url.length = 0) {
-  //     setError("none");
-  //     setErrorText("none");
-  //   } else {
-  //     setError("2px solid var(--faded-red)");
-  //     setErrorText("block");
-  //   }
-  // }, [url]);
+  useEffect(() => {
+    if (url.includes(".") && url.length >= 3) {
+      setErrorText("none");
+      setErrorBorder("none");
+    }
+  }, [url]);
 
   return (
     <form className="Shortener" onSubmit={handleSubmit}>
       <div className="Shortener__input-wrapper">
         <input
-          pattern="\d+\.\d+"
-          required
           placeholder="Shorten a link here.."
           className="Shortener__input"
           type="text"
           value={url}
           onChange={(event) => setUrl(event.target.value)}
-          style={{ border: error }}
+          style={{ border: errorBorder }}
         />
         <button className="Shortener__submit" type="submit">
           Shorten It!
