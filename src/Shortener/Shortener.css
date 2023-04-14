@@ -9,7 +9,7 @@
   bottom: 3rem;
 }
 
-.Shortener__input-area {
+.Shortener__input-wrapper {
   background: url(/bg-shorten-desktop.svg);
   background-color: var(--dark-purple);
   color: var(--dark-blue);
@@ -19,6 +19,7 @@
   gap: 1rem;
   padding: 2rem;
   border-radius: 0.5rem;
+  position: relative;
 }
 
 .Shortener__input {
@@ -30,7 +31,10 @@
 
 .Shortener__input:focus {
   border: none;
+  outline: none;
 }
+
+/* 2px solid var(--faded-red) */
 
 .Shortener__submit {
   color: var(--white);
@@ -51,7 +55,7 @@
   padding: 1rem;
   border-radius: 0.5rem;
   background: var(--white);
-  display: none;
+  /* display: none; */
 }
 
 .Shortener__output-original {
@@ -78,6 +82,14 @@
 
 .Shortener__copy-button:hover {
   opacity: 50%;
+}
+
+.test {
+  position: absolute;
+  top: 5rem;
+  color: var(--faded-red);
+  left: 2.25rem;
+  font-size: 0.75rem;
 }
 
 @media (max-width: 855px) {

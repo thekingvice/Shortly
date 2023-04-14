@@ -67,12 +67,12 @@
 .Nav__hamburger-menu {
   display: none;
   position: relative;
-  cursor: pointer;
 }
 
 .Nav__hamburger-icon {
   filter: invert(63%) sepia(5%) saturate(318%) hue-rotate(208deg)
     brightness(90%) contrast(94%);
+  cursor: pointer;
 }
 
 .Nav__mobile-link {
@@ -83,12 +83,20 @@
   width: fit-content;
 }
 
+.Nav__mobile-link:hover {
+  color: var(--tiffany);
+}
+
 .Nav__mobile-login {
   margin: 1.5rem 0 1rem 0;
   color: var(--white);
   font-weight: 700;
   width: fit-content;
   cursor: pointer;
+}
+
+.Nav__mobile-login:hover {
+  color: var(--tiffany);
 }
 
 .Nav__mobile-signup {

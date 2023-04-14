@@ -38,21 +38,21 @@ export default function Nav() {
           src="/hamburger-menu.svg"
           alt="menu"
         />
+        <aside className="Nav__mobile" style={{ display: mobile }}>
+          <a className="Nav__mobile-link" href="">
+            Reatures
+          </a>
+          <a className="Nav__mobile-link" href="">
+            Pricing
+          </a>
+          <a className="Nav__mobile-link" href="">
+            Resources
+          </a>
+          <div className="Nav__mobile-div"></div>
+          <button className="Nav__mobile-login">Login</button>
+          <button className="Nav__mobile-signup">Sign Up</button>
+        </aside>
       </div>
-      <aside className="Nav__mobile" style={{ display: mobile }}>
-        <a className="Nav__mobile-link" href="">
-          Reatures
-        </a>
-        <a className="Nav__mobile-link" href="">
-          Pricing
-        </a>
-        <a className="Nav__mobile-link" href="">
-          Resources
-        </a>
-        <div className="Nav__mobile-div"></div>
-        <button className="Nav__mobile-login">Login</button>
-        <button className="Nav__mobile-signup">Sign Up</button>
-      </aside>
     </nav>
   );
 }

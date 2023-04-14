@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 
 :root {
+  --faded-red: #e6686b;
   --grey: #929199;
   --black: black;
   --tiffany: #29d1d1;
@@ -24,8 +25,8 @@
   border: 0;
   font: inherit;
   background: none;
-  background: rgba(146, 146, 146, 0.266);
-  outline: dotted 2px;
+  /* background: rgba(146, 146, 146, 0.266);
+  outline: dotted 2px; */
 }
 
 html {
