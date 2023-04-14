@@ -121,6 +121,15 @@
 }
 
 @media (max-width: 650px) {
+  .Nav {
+    position: sticky;
+    z-index: 2;
+    top: 0rem;
+    background: #ffffffe3;
+    padding: 2rem 5%;
+    margin: 0;
+  }
+
   .Nav__right-wrapper {
     display: none;
   }
