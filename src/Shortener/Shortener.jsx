@@ -75,7 +75,7 @@ export default function Shortener() {
         <button className="Shortener__submit" type="submit">
           Shorten It!
         </button>
-        <aside className="test" style={{ display: errorText }}>
+        <aside className="Shortener__error-text" style={{ display: errorText }}>
           Please add a link
         </aside>
       </div>
