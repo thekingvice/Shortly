@@ -65,3 +65,9 @@
 .Stats__card-paragraph {
   color: var(--grey);
 }
+
+@media (max-width: 855px) {
+  .Stats__card-section {
+    flex-direction: column;
+  }
+}

@@ -17,13 +17,13 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding: 2rem 1rem;
+  padding: 2rem;
   border-radius: 0.5rem;
 }
 
 .Shortener__input {
   background-color: var(--white);
-  width: 90%;
+  width: 100%;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 }
@@ -78,4 +78,24 @@
 
 .Shortener__copy-button:hover {
   opacity: 50%;
+}
+
+@media (max-width: 855px) {
+  .Shortener__input-area {
+    flex-direction: column;
+  }
+
+  .Shortener__output {
+    flex-direction: column;
+  }
+
+  .Shortener__output-right {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .Shortener__copy-button {
+    width: 100%;
+  }
 }

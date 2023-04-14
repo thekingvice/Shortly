@@ -48,3 +48,80 @@
 .Nav__sign-up:active {
   opacity: 50%;
 }
+
+.Nav__mobile {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  padding: 2rem 1rem;
+  background: var(--dark-purple);
+  right: 2rem;
+  top: 6rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  cursor: default;
+  display: none;
+}
+
+.Nav__hamburger-menu {
+  display: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.Nav__hamburger-icon {
+  filter: invert(63%) sepia(5%) saturate(318%) hue-rotate(208deg)
+    brightness(90%) contrast(94%);
+}
+
+.Nav__mobile-link {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+}
+
+.Nav__mobile-login {
+  margin: 1.5rem 0 1rem 0;
+  color: var(--white);
+  font-weight: 700;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.Nav__mobile-signup {
+  color: var(--white);
+  font-weight: 700;
+  background: var(--tiffany);
+  padding: 0.5rem 1rem;
+  width: 15rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.Nav__mobile-signup:hover {
+  background: var(--bright-tiffany);
+}
+
+.Nav__mobile-div {
+  height: 1px;
+  background: var(--grey);
+  width: 100%;
+  opacity: 50%;
+}
+
+@media (max-width: 650px) {
+  .Nav__right-wrapper {
+    display: none;
+  }
+
+  .Nav__link {
+    display: none;
+  }
+
+  .Nav__hamburger-menu {
+    display: block;
+  }
+}
