@@ -8,6 +8,16 @@ export default function Shortener() {
 
   const [originalUrl, setOriginalUrl] = useState("");
 
+  const [errorBorder, setErrorBorder] = useState("none");
+
+  const [errorText, setErrorText] = useState("none");
+
+  const [output, setOutput] = useState("none");
+
+  const [buttonColor, setButtonColor] = useState("var(--tiffany)");
+
+  const [text, setText] = useState("Copy");
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -26,21 +36,26 @@ export default function Shortener() {
         })
         .catch((error) => console.log(error));
       setUrl("");
+      setOutput("flex");
     } else {
       setErrorText("block");
       setErrorBorder("2px solid var(--faded-red)");
     }
   };
 
-  const handleCopy = () => {
+  const handleCopy = (event) => {
+    event.preventDefault();
     navigator.clipboard.writeText(shortUrl);
+    setButtonColor("var(--dark-purple)");
+    setText("Copied!");
+    setTimeout(() => {
+      setButtonColor("var(--tiffany)");
+      setText("Copy");
+    }, 2000);
   };
 
-  const [errorBorder, setErrorBorder] = useState("none");
-  const [errorText, setErrorText] = useState("none");
-
   useEffect(() => {
-    if (url.includes(".") && url.length >= 3) {
+    if (url.length === 0) {
       setErrorText("none");
       setErrorBorder("none");
     }
@@ -65,12 +80,16 @@ export default function Shortener() {
         </aside>
       </div>
 
-      <div className="Shortener__output">
+      <div className="Shortener__output" style={{ display: output }}>
         <p className="Shortener__output-original">{originalUrl}</p>
         <div className="Shortener__output-right">
           <p className="Shortener__output-short"> {shortUrl}</p>
-          <button className="Shortener__copy-button" onClick={handleCopy}>
-            Copy
+          <button
+            className="Shortener__copy-button"
+            onClick={handleCopy}
+            style={{ background: buttonColor }}
+          >
+            {text}
           </button>
         </div>
       </div>
